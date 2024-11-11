@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Sensores</title>
+    <script src="js/tabla.js" defer></script>
+    <script src="js/nav.js" defer></script>
+</head>
+<body>
+    
+    <h1>Lista de Sensores</h1>
+
+    <label for="buscador">Buscar Sensor:</label>
+    <input type="text" id="buscador" placeholder="Buscar por nombre o descripción">
+
+    <table border="1" id="tablaSensores">
+        <thead>
+            <tr>
+                <th>Nombre del Elemento</th>
+                <th>Descripción</th>
+                <th>Número de Serie</th>
+                <th>Estado</th>
+                <th>Prioridad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filas generadas dinámicamente por JavaScript -->
+        </tbody>
+    </table>
+
+    <form id="formularioEdicion" style="display:none; margin-top: 20px;">
+        <h2>Editar Sensor</h2>
+        
+        <label for="nombre">Nombre del Elemento:</label><br>
+        <input type="text" id="nombre"><br><br>
+
+        <label for="descripcion">Descripción del Elemento:</label><br>
+        <textarea id="descripcion"></textarea><br><br>
+
+        <label for="numero_serie">Número de Serie:</label><br>
+        <input type="text" id="numero_serie"><br><br>
+
+        <label for="estado">Estado:</label><br>
+        <input type="checkbox" id="estado" value="activo"> Activo<br><br>
+
+        <label for="prioridad">Prioridad:</label><br>
+        <input type="radio" id="alta" name="prioridad" value="alta"> Alta<br>
+        <input type="radio" id="media" name="prioridad" value="media"> Media<br>
+        <input type="radio" id="baja" name="prioridad" value="baja"> Baja<br><br>
+
+        <button type="button" id="guardarCambios" style="display:none;">Guardar Cambios</button>
+    </form>
+
+</body>
+</html>
